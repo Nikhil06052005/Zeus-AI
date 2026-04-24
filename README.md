@@ -43,11 +43,11 @@ The product combines a React + Tailwind frontend with a Node/Express backend, Op
 
 ![Code View / Source Panel](client/src/assets/55.png)
 
-### Stripe Checkout
+### Website Generation Flow
 
 ![Stripe Checkout](client/src/assets/66.png)
 
-### Website Generation Flow
+### Stripe Checkout
 
 ![Website Generation Flow](client/src/assets/77.png)
 
