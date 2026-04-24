@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+	--bg-void: #030304;
+	--surface-dark: #0f1115;
+	--surface-glass: rgba(255, 255, 255, 0.04);
+	--fg: #ffffff;
+	--muted: #94a3b8;
+	--border: #1e293b;
+	--btc: #f7931a;
+	--btc-deep: #ea580c;
+	--gold: #ffd600;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg-void);
+	color: var(--fg);
+	font-family: "Inter", sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+.font-heading {
+	font-family: "Space Grotesk", sans-serif;
+}
+
+.font-body {
+	font-family: "Inter", sans-serif;
+}
+
+.font-mono {
+	font-family: "JetBrains Mono", monospace;
+}
+
+.bg-grid-pattern {
+	background-size: 50px 50px;
+	background-image:
+		linear-gradient(to right, rgba(30, 41, 59, 0.45) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(30, 41, 59, 0.45) 1px, transparent 1px);
+	mask-image: radial-gradient(circle at center, black 38%, transparent 100%);
+}
+
+.noise-overlay {
+	background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+	opacity: 0.05;
+}
+
+.surface-card {
+	background: linear-gradient(180deg, rgba(15, 17, 21, 0.96), rgba(15, 17, 21, 0.78));
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	transition: all 0.3s ease;
+}
+
+.surface-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(247, 147, 26, 0.45);
+	box-shadow: 0 0 30px -10px rgba(247, 147, 26, 0.2);
+}
+
+.surface-glass {
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(16px);
+}
+
+.gradient-brand {
+	background: linear-gradient(to right, var(--btc), var(--gold));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.btn-primary {
+	background: linear-gradient(to right, var(--btc-deep), var(--btc));
+	color: #fff;
+	border: 1px solid rgba(247, 147, 26, 0.55);
+	box-shadow: 0 0 20px -5px rgba(234, 88, 12, 0.5);
+}
+
+.btn-primary:hover {
+	transform: scale(1.04);
+	box-shadow: 0 0 30px -5px rgba(247, 147, 26, 0.62);
+}
+
+.btn-outline {
+	border: 1px solid rgba(255, 255, 255, 0.24);
+	background: transparent;
+	color: #fff;
+}
+
+.btn-outline:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.focus-visible-btc:focus-visible {
+	outline: none;
+	border-color: var(--btc);
+	box-shadow: 0 10px 20px -10px rgba(247, 147, 26, 0.35);
+}
+
+.terminal-input {
+	height: 48px;
+	border: 0;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	background: rgba(0, 0, 0, 0.52);
+	color: #fff;
+}
+
+.terminal-input::placeholder,
+.terminal-textarea::placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.terminal-textarea {
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	background: rgba(0, 0, 0, 0.52);
+}
+
+.animate-float {
+	animation: float 8s ease-in-out infinite;
+}
+
+.orbit-slow {
+	animation: spin 10s linear infinite;
+}
+
+.orbit-reverse {
+	animation: spinReverse 15s linear infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spinReverse {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-float,
+	.orbit-slow,
+	.orbit-reverse,
+	.animate-ping,
+	.animate-bounce {
+		animation: none !important;
+	}
+
+	* {
+		transition-duration: 0.01ms !important;
+	}
+}
