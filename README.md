@@ -23,39 +23,33 @@ The product combines a React + Tailwind frontend with a Node/Express backend, Op
 
 ## Screenshots
 
-> Add screenshot files in [docs/screenshots](docs/screenshots) using the file names below.
-
 ### Home / Landing
 
-![Home Hero](docs/screenshots/home-hero.png)
+![Home / Landing](client/src/assets/11.png)
 
-### Pricing Plans
+### Pricing
 
-![Pricing Plans](docs/screenshots/pricing-plans.png)
-
-### Stripe Checkout
-
-![Stripe Checkout](docs/screenshots/stripe-checkout.png)
+![Pricing](client/src/assets/22.png)
 
 ### Dashboard
 
-![Dashboard Grid](docs/screenshots/dashboard-grid.png)
+![Dashboard](client/src/assets/33.png)
 
-### Generate Page
+### Live Preview Editor
 
-![Generate Page](docs/screenshots/generate-page.png)
+![Live Preview Editor](client/src/assets/44.png)
 
-### Editor Live Preview
+### Code View / Source Panel
 
-![Editor Live Preview](docs/screenshots/editor-live-preview.png)
+![Code View / Source Panel](client/src/assets/55.png)
 
-### Editor Code Modal
+### Stripe Checkout
 
-![Editor Code Modal](docs/screenshots/editor-code-modal.png)
+![Stripe Checkout](client/src/assets/66.png)
 
-### Research Reference Screenshot
+### Website Generation Flow
 
-![Research Paper Search](docs/screenshots/research-paper-search.png)
+![Website Generation Flow](client/src/assets/77.png)
 
 ## Tech Stack
 
