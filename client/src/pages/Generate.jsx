@@ -151,7 +151,7 @@ function Generate() {
                         <div className='mt-4 text-center text-xs text-slate-400'>
                             Estimated time remaining:{" "}
                             <span className="font-medium text-[#FFD600]">
-                                ~8–12 minutes
+                                ~1–2 minutes
                             </span>
                         </div>
 
