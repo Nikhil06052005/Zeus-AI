@@ -11,16 +11,21 @@ function LoginModal({ open, onClose }) {
 const dispatch=useDispatch()
     const handleGoogleAuth=async ()=>{
         try {
+            console.log("Starting Google login...")
             const result=await signInWithPopup(auth,provider)
+            console.log("Firebase login successful:", result.user.email)
+            
             const {data}=await axios.post(`${serverUrl}/api/auth/google`,{
                 name:result.user.displayName,
                 email:result.user.email,
                 avatar:result.user.photoURL
             },{withCredentials:true})
+            console.log("Server auth successful:", data)
             dispatch(setUserData(data))
             onClose()
         } catch (error) {
-            console.log(error)
+            console.error("Google Auth Error:", error?.response?.data || error?.message || error)
+            alert("Login failed: " + (error?.response?.data?.message || error?.message || "Unknown error"))
         }
     }
     return (
